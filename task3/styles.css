@@ -1,0 +1,40 @@
+.container {
+  max-width: 800px;
+}
+
+/* Apply to all children of container */
+.container > * {
+  padding: 10px;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr repeat(2, 150px);
+  grid-template-areas:
+    "header header header header"
+    "nav main main main"
+    "nav main main main"
+    "footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: #f00;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #0f0;
+}
+
+main {
+  grid-area: main;
+  background-color: #00f;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #000;
+}
